@@ -12,7 +12,7 @@ Run <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a> 
 - [Process and Working](#Process-and-Working)
   - [Pre-Requisite](#Pre-Requisite)
   - [Adding dependencies and writing test](#Adding-dependencies-and-writing-test)
-
+- [References](#References)
 
 # Introduction
 
@@ -47,3 +47,8 @@ The following things are configured as part of creating this demo.
 - Information on Test Case and Parameter for running the test is added in [integration folder](./cypress/integration/).
 - [Cypress.json](./cypress.json) consist of BaseUrl and default timeouts which can be changed based on need.
 - [package-lock.json](./package-lock.json) consist of all the npm dependencies required to run Cypress and Lighthouse.
+
+# References
+- [Cypress Installation](https://docs.cypress.io/guides/getting-started/installing-cypress)
+- [Cypress-audit](https://github.com/mfrachet/cypress-audit)
+- [pa11y](https://pa11y.org/)
