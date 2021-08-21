@@ -2,7 +2,7 @@
 
 In the cypress/plugins/index.js file:
 
->*  Configure Lighthouse CLI
+>*  Configure Lighthouse CLI with just comparision of threashold but no report
 
 ```const { lighthouse, prepareAudit } = require('cypress-audit');
 
@@ -17,6 +17,8 @@ module.exports = (on, config) => {
 };
 ```
 >*  Configure Lighthouse Reports
+
+Printing Report on Console
 ```
 const { lighthouse, pa11y, prepareAudit } = require("cypress-audit");
 
@@ -108,7 +110,7 @@ module.exports = (on, config) => {
   });
 };
 ```
-* Save the whole report in a JSON file.
+* Save the whole report in a JSON file which can be copied and pasted in [Lighthouse-Report-Viewer](https://googlechrome.github.io/lighthouse/viewer/).
 
 ```
 module.exports = (on, config) => {
@@ -128,5 +130,3 @@ module.exports = (on, config) => {
   });
 };
 ```
-
-Now, with the full JSON file, you can view the html report from [Lighthouse-Report-Viewer](https://googlechrome.github.io/lighthouse/viewer/).
