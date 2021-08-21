@@ -1,4 +1,18 @@
 ## Accessing the raw reports
+>*  Configure Lighthouse CLI
+
+```const { lighthouse, prepareAudit } = require('cypress-audit');
+
+module.exports = (on, config) => {
+  on('before:browser:launch', (browser = {}, launchOptions) => {
+    prepareAudit(launchOptions);
+  });
+
+  on('task', {
+    lighthouse: lighthouse(),
+  });
+};
+```
 
 In the cypress/plugins/index.js file:
 ```
