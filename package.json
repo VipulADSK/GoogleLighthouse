@@ -1,12 +1,12 @@
 {
   "name": "cypressautomation",
   "version": "1.0.0",
-  "description": "",
+  "description": "This repo is demo example of using lighthouse performance test using cypress",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Vipul",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^8.3.0",
