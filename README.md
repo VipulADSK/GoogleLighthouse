@@ -45,3 +45,5 @@ The following things are configured as part of creating this demo.
 - Information on adding dependencies for importing `cypress-audit` library is added in [support folder](./cypress/support).
 - Information on adding Lighthouse and Report Configuration is added in [plugin folder](./cypress/plugins/).
 - Information on Test Case and Parameter for running the test is added in [integration folder](./cypress/integration/).
+- [Cypress.json](./cypress.json) consist of BaseUrl and default timeouts which can be changed based on need.
+- [package-lock.json](./package-lock.json) consist of all the npm dependencies required to run Cypress and Lighthouse.
