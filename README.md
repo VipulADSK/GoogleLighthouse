@@ -11,6 +11,7 @@ Run <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a> 
 - [Usage](#How-to-use-the-repo)
 - [Process and Working](#Process-and-Working)
   - [Pre-Requisite](#Pre-Requisite)
+  - [Adding dependencies and writing test](#Adding-dependencies-and-writing-test)
 
 
 # Introduction
@@ -30,7 +31,7 @@ This is an example repository to showcase how you can use cypress-audit to easil
 - Clone the repository
 - In the root folder run `npm install` to get all the dependencies required to run the test
 
-# Process and Working
+# Process and Working (Just for information)
 
 The following things are configured as part of creating this demo.
 
@@ -38,3 +39,9 @@ The following things are configured as part of creating this demo.
 
 - [Node.js and npm](https://nodejs.org/) is installed in the system.
 - [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) is installed in a folder in home directory.
+
+## Adding dependencies and writing test
+
+- Information on adding dependencies for importing `cypress-audit` library is added in [support folder](./cypress/support).
+- Information on adding Lighthouse and Report Configuration is added in [plugin folder](./cypress/plugins/).
+- Information on Test Case and Parameter for running the test is added in [integration folder](./cypress/integration/).
