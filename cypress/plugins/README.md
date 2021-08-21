@@ -1,4 +1,7 @@
-## Accessing the raw reports
+## Configuring Lighthouse and Reports
+
+In the cypress/plugins/index.js file:
+
 >*  Configure Lighthouse CLI
 
 ```const { lighthouse, prepareAudit } = require('cypress-audit');
@@ -13,8 +16,7 @@ module.exports = (on, config) => {
   });
 };
 ```
-
-In the cypress/plugins/index.js file:
+>*  Configure Lighthouse Reports
 ```
 const { lighthouse, pa11y, prepareAudit } = require("cypress-audit");
 
