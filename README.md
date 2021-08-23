@@ -9,7 +9,7 @@ Run <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a> 
 # Table of Content
 - [Introduction](#Lighthouse-Cypress-Integration)
 - [Usage](#How-to-use-the-repo)
-- [Process and Working](#Process-and-Working-(-Just-for-information-))
+- [Process and Working](#Process-and-Working-Just-for-information)
   - [Pre-Requisite](#Pre-Requisite)
   - [Adding dependencies and writing test](#Adding-dependencies-and-writing-test)
 - [References](#References)
