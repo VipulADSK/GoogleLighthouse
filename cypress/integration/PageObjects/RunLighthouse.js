@@ -26,9 +26,8 @@ class RunLighthouse
             // "total-byte-weight": 3000000,
             // "dom-size": 1000
         };
-        const DEVTOOLS_RTT_ADJUSTMENT_FACTOR = 3.75;
-        const DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR = 0.9;
-        
+  
+  
         // For more details on network and CPU throttling and choosing the value refer https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-lighthouse-panel-throttling
         const desktopConfig = {
             extends: 'lighthouse:default',
