@@ -33,7 +33,7 @@ class RunLighthouse
         const desktopConfig = {
             extends: 'lighthouse:default',
             formFactor: 'desktop',
-         
+
             
             //1. No throttling and CPU slowdown (This will test performance with full CPU and Network Connection Spec of the device)
                 throttling:{
@@ -43,7 +43,7 @@ class RunLighthouse
                 },
 
 
-            //2. Throttling Set to Broadband with Latency 40ms and Throughput 10 Mbps
+            //2. Throttling Set to Broadband with Latency 40ms and Throughput 10 Mbps over desktop
                 // throttling:{
                 //     cpuSlowdownMultiplier: 1,
                 //     rttMs: 40,
@@ -53,7 +53,7 @@ class RunLighthouse
 
             //3. Throttling Set to mobile 4G with Latency 150ms and Throughput 1.6 Mbps
                 // throttling:{
-                //     cpuSlowdownMultiplier: 1,
+                //     cpuSlowdownMultiplier: 4,
                 //     rttMs: 150,
                 //     throughputKbps: 1.6 * 1024,
                 // },
@@ -61,7 +61,7 @@ class RunLighthouse
             
             //4.  Throttling Set to mobile 3G with Latency 300ms and Throughput 700 Kbps
                 // throttling:{
-                //     cpuSlowdownMultiplier: 1,
+                //     cpuSlowdownMultiplier: 4,
                 //     rttMs: 300,
                 //     throughputKbps: 700,
                 // },
