@@ -56,7 +56,6 @@ class RunLighthouse
                 //     cpuSlowdownMultiplier: 1,
                 //     rttMs: 150,
                 //     throughputKbps: 1.6 * 1024,
-                //     requestLatencyMs: 150 * DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
                 // },
             
             
