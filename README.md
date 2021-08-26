@@ -4,7 +4,7 @@ Run <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a> 
 
 ---
 
-[![License: GNU General Public License](https://img.shields.io/badge/License-GNU%20--%20General%20Public%20License-yellow)](https://fsf.org/)     [![CodeQL](https://github.com/VipulADSK/GoogleLighthouse/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/VipulADSK/GoogleLighthouse/actions/workflows/codeql-analysis.yml)
+[![License: GNU General Public License](https://img.shields.io/badge/License-GNU%20--%20General%20Public%20License-blue)](https://fsf.org/)       [![CodeQL](https://github.com/VipulADSK/GoogleLighthouse/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/VipulADSK/GoogleLighthouse/actions/workflows/codeql-analysis.yml)
 
 # Table of Content
 - [Introduction](#Lighthouse-Cypress-Integration)
