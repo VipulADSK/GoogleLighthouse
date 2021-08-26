@@ -9,13 +9,13 @@ class RunLighthouse
             pwa: 30,
             
             //Below are the scores which determines performance sccores (Refer https://web.dev/performance-scoring/)
-            "first-contentful-paint": 3000,
-            "largest-contentful-paint": 3000,
-            "first-meaningful-paint": 3000,
-            "speed-index": 3000,
+            "first-contentful-paint": 4000,
+            "largest-contentful-paint": 4000,
+            "first-meaningful-paint": 4000,
+            "speed-index": 4000,
             "cumulative-layout-shift": 1,
-            "total-blocking-time": 2,
-            "interactive": 3000,
+            "total-blocking-time": 100,
+            "interactive": 4000,
             // "max-potential-fid": 1000,
             // "server-response-time": 3000,
             // "mainthread-work-breakdown": 1000,
@@ -32,14 +32,9 @@ class RunLighthouse
         const desktopConfig = {
             extends: 'lighthouse:default',
             formFactor: 'desktop',
-
             
-            //1. No throttling and CPU slowdown (This will test performance with full CPU and Network Connection Spec of the device)
-                throttling:{
-                    cpuSlowdownMultiplier: 0,
-                    rttMs: 0,
-                    throughputKbps: 0,
-                },
+            //1. ThrottlingMethod set to provided will run the lighthouse audit on environment variables with no throttling
+            throttlingMethod: 'provided',
 
 
             //2. Throttling Set to Broadband with Latency 40ms and Throughput 10 Mbps over desktop
