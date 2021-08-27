@@ -7,8 +7,6 @@ describe('Lighthouse', () => {
     it('should run performance audits', () => {
         const lp = new LoginPage()
         const rl = new RunLighthouse()
-        // const username = 'adsktest2020'
-        // const password = 'pa3$WORD'
         
         //Going to BaseUrl and Resize with clearing cooking and storage
         lp.visit()
