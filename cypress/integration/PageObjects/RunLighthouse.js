@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 class RunLighthouse
 {
     runAudit(){
