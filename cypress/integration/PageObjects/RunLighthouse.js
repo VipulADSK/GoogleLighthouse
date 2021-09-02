@@ -6,7 +6,7 @@ class RunLighthouse
             accessibility: 50,
             "best-practices": 50,
             seo: 40,
-            pwa: 30,
+            //pwa: 30,
             
             //Below are the scores which determines performance sccores (Refer https://web.dev/performance-scoring/)
             "first-contentful-paint": 4000,
