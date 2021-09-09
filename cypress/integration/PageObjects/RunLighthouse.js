@@ -56,7 +56,7 @@ class RunLighthouse
                 //      requestLatencyMs: 150 * DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
                 //      downloadThroughputKbps: 1.6 * 1024 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
                 //      uploadThroughputKbps: 750 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
-                //      cpuSlowdownMultiplier: 4,
+                //      cpuSlowdownMultiplier: 1,
                 // },
             
             
@@ -69,7 +69,7 @@ class RunLighthouse
                 //      requestLatencyMs: 300 * DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
                 //      downloadThroughputKbps: 700 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
                 //      uploadThroughputKbps: 700 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
-                //      cpuSlowdownMultiplier: 4,
+                //      cpuSlowdownMultiplier: 1,
                 // },
 
 
