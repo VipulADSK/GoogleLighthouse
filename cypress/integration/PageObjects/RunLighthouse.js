@@ -28,43 +28,54 @@ class RunLighthouse
             // "dom-size": 1000
         };
   
-  
-        // For more details on network and CPU throttling and choosing the value refer https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-lighthouse-panel-throttling
+        const DEVTOOLS_RTT_ADJUSTMENT_FACTOR = 3.75;
+        const DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR = 0.9;
         const desktopConfig = {
             extends: 'lighthouse:default',
             formFactor: 'desktop',
             
-            //1. ThrottlingMethod set to provided will run the lighthouse audit on environment variables with no throttling
-            throttlingMethod: 'provided',
+            throttlingMethod: 'devtools', //Method can be any of the following "devtools", "provided", "simulate"
+            
+        // Using a "broadband" connection type
+        // Corresponds to "Dense 4G 25th percentile" in https://docs.google.com/document/d/1Ft1Bnq9-t4jK5egLSOc28IL4TvR-Tt0se_1faTA4KTY/edit#heading=h.bb7nfy2x9e5v
+                throttling:{
+                     rttMs: 40,
+                     throughputKbps: 10 * 1024,
+                     cpuSlowdownMultiplier: 1,
+                     requestLatencyMs: 0, // 0 means unset
+                     downloadThroughputKbps: 0,
+                     uploadThroughputKbps: 0,
+                },
+            
 
-
-            //2. Throttling Set to Broadband with Latency 40ms and Throughput 10 Mbps over desktop
+        // These values align with WebPageTest's definition of "Fast 3G"
+        // But offer similar charateristics to roughly the 75th percentile of 4G connections.
                 // throttling:{
-                //     cpuSlowdownMultiplier: 1,
-                //     rttMs: 40,
-                //     throughputKbps: 10 * 1024,
+                //      rttMs: 150,
+                //      throughputKbps: 1.6 * 1024,
+                //      requestLatencyMs: 150 * DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
+                //      downloadThroughputKbps: 1.6 * 1024 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+                //      uploadThroughputKbps: 750 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+                //      cpuSlowdownMultiplier: 4,
                 // },
             
-
-            //3. Throttling Set to mobile 4G with Latency 150ms and Throughput 1.6 Mbps
-                // throttling:{
-                //     cpuSlowdownMultiplier: 4,
-                //     rttMs: 150,
-                //     throughputKbps: 1.6 * 1024,
-                // },
             
-            
-            //4.  Throttling Set to mobile 3G with Latency 300ms and Throughput 700 Kbps
+        // These values partially align with WebPageTest's definition of "Regular 3G".
+        // These values are meant to roughly align with Chrome UX report's 3G definition which are based
+        // on HTTP RTT of 300-1400ms and downlink throughput of <700kbps.
                 // throttling:{
-                //     cpuSlowdownMultiplier: 4,
-                //     rttMs: 300,
-                //     throughputKbps: 700,
+                //      rttMs: 300,
+                //      throughputKbps: 700,
+                //      requestLatencyMs: 300 * DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
+                //      downloadThroughputKbps: 700 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+                //      uploadThroughputKbps: 700 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+                //      cpuSlowdownMultiplier: 4,
                 // },
 
 
             screenEmulation: { disabled: true },
         }
-
+        
         cy.lighthouse(customThresholds, desktopConfig)
         return this
     }
