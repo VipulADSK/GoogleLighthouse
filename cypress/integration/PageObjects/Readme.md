@@ -33,7 +33,7 @@ Starting with Chrome 80, the Audits panel is simplifying the throttling configur
 
 1. _Simulated throttling_ remains the default setting. This matches the setup of PageSpeed Insights and the Lighthouse CLI default, so this provides cross-tool consistency.
 2. _No throttling_ is removed as it leads to innacurate scoring and misleading metric results.
-3. Within the Audits panel settings, you can uncheck the _Simulated throttling_ checkbox to use _Applied throttling_. For the moment, we are keeping this _Applied throttling_ option available for users of the [`View Trace` button](https://developers.google.com/web/updates/2018/04/devtools#traces). Under applied throttling, the trace matches the metrics values, whereas under Simulated things do not currently match up.
+3. Within the Audits panel settings, you can uncheck the _Simulated throttling_ checkbox to use _Applied throttling_. This _Applied throttling_ option is available for users of the [`View Trace` button](https://developers.google.com/web/updates/2018/04/devtools#traces). Under applied throttling, the trace matches the metrics values, whereas under Simulated things do not currently match up.
 
 ## How do I get packet-level throttling?
 
