@@ -15,7 +15,10 @@ describe('Lighthouse', () => {
         cy.fixture('Dataprovider.json').then(user => {
             lp.PerformLogin(user.username,user.password)
         })
-        
+
+        // Go to directory
+        lp.VisitDirectory()
+
         //Running Lighthouse. More information on various audits below can be found on https://web.dev/learn/#lighthouse
         rl.runAudit()
     });

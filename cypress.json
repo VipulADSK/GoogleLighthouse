@@ -1,5 +1,6 @@
 {
-    "baseUrl": "https://www.demoblaze.com/",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/",
+    "chromeWebSecurity": false,
     "defaultCommandTimeout": 10000,
     "execTimeout": 10000
   }

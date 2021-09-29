@@ -4,19 +4,20 @@ class LoginPage
     visit(){
         cy.visit('/')
         cy.viewport(1536, 960)
-        cy.clearCookies()
-        cy.clearLocalStorage()
     }
 
     PerformLogin(Email, Password){
-        cy.get(cy.get('#login2').click())
-        cy.get('#loginusername').should('be.visible')
+        cy.get('#txtUsername').should('be.visible')
         cy.wait(2000)
-        cy.get('#loginusername').type(Email)
-        cy.get('#loginpassword').type(Password)
-        cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
-        cy.wait(3000)
+        cy.get('#txtUsername').type(Email)
+        cy.get('#txtPassword').type(Password)
+        cy.get('#btnLogin').click()
+        cy.get('h1').should('be.visible')
         return this
+    }
+
+    VisitDirectory(){
+        cy.get('#menu_directory_viewDirectory').click()
     }
 }
 export default LoginPage

@@ -3,20 +3,20 @@ class RunLighthouse
 {
     runAudit(){
         const customThresholds = {
-            performance: 70,
+            performance: 50,
             accessibility: 50,
             "best-practices": 50,
             seo: 40,
             //pwa: 30,
             
             //Below are the scores which determines performance sccores (Refer https://web.dev/performance-scoring/)
-            "first-contentful-paint": 4000,
-            "largest-contentful-paint": 4000,
-            "first-meaningful-paint": 4000,
-            "speed-index": 4000,
-            "cumulative-layout-shift": 1,
+            "first-contentful-paint": 5000,
+            "largest-contentful-paint": 5000,
+            "first-meaningful-paint": 40050000,
+            "speed-index": 6000,
+            "cumulative-layout-shift": 0.1,
             "total-blocking-time": 100,
-            "interactive": 4000,
+            "interactive": 5000,
             // "max-potential-fid": 1000,
             // "server-response-time": 3000,
             // "mainthread-work-breakdown": 1000,
