@@ -8,7 +8,7 @@ class LoginPage
 
     PerformLogin(Email, Password){
         cy.get('#txtUsername').should('be.visible')
-        cy.wait(2000)
+        cy.wait(200)
         cy.get('#txtUsername').type(Email)
         cy.get('#txtPassword').type(Password)
         cy.get('#btnLogin').click()

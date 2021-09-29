@@ -12,7 +12,7 @@ class RunLighthouse
             //Below are the scores which determines performance sccores (Refer https://web.dev/performance-scoring/)
             "first-contentful-paint": 5000,
             "largest-contentful-paint": 5000,
-            "first-meaningful-paint": 40050000,
+            "first-meaningful-paint": 50000,
             "speed-index": 6000,
             "cumulative-layout-shift": 0.1,
             "total-blocking-time": 100,
@@ -28,10 +28,10 @@ class RunLighthouse
             // "dom-size": 1000
         };
   
-        const DEVTOOLS_RTT_ADJUSTMENT_FACTOR = 3.75;
-        const DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR = 0.9;
+        const DEVTOOLS_RTT_ADJUSTMENT_FACTOR = 5;
+        const DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR = 0.8;
         const desktopConfig = {
-            extends: 'lighthouse:default',
+            //extends: 'lighthouse:default',
             formFactor: 'desktop',
             
             throttlingMethod: 'devtools', //Method can be any of the following "devtools", "provided", "simulate"
@@ -39,12 +39,12 @@ class RunLighthouse
         // Using a "broadband" connection type
         // Corresponds to "Dense 4G 25th percentile" in https://docs.google.com/document/d/1Ft1Bnq9-t4jK5egLSOc28IL4TvR-Tt0se_1faTA4KTY/edit#heading=h.bb7nfy2x9e5v
                 throttling:{
-                     rttMs: 40,
-                     throughputKbps: 10 * 1024,
-                     cpuSlowdownMultiplier: 1,
-                     requestLatencyMs: 0, // 0 means unset
-                     downloadThroughputKbps: 0,
-                     uploadThroughputKbps: 0,
+                        rttMs: 40,
+                        throughputKbps: 10 * 1024,
+                        cpuSlowdownMultiplier: 1,
+                        requestLatencyMs: 0, // 0 means unset
+                        downloadThroughputKbps: 0,
+                        uploadThroughputKbps: 0,
                 },
             
 
