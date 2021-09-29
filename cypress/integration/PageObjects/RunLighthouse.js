@@ -42,9 +42,9 @@ class RunLighthouse
                         rttMs: 40,
                         throughputKbps: 10 * 1024,
                         cpuSlowdownMultiplier: 1,
-                        requestLatencyMs: 0, // 0 means unset
-                        downloadThroughputKbps: 0,
-                        uploadThroughputKbps: 0,
+                        requestLatencyMs: 40 * DEVTOOLS_RTT_ADJUSTMENT_FACTOR, // 0 means unset
+                        downloadThroughputKbps: 10 * 1024 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+                        uploadThroughputKbps: 10 * 1024 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
                 },
             
 
