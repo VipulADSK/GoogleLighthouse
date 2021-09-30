@@ -12,8 +12,8 @@ class RunLighthouse
             //Below are the scores which determines performance sccores (Refer https://web.dev/performance-scoring/)
             "first-contentful-paint": 5000,
             "largest-contentful-paint": 5000,
-            "first-meaningful-paint": 50000,
-            "speed-index": 6000,
+            "first-meaningful-paint": 5000,
+            "speed-index": 5000,
             "cumulative-layout-shift": 0.1,
             "total-blocking-time": 100,
             "interactive": 5000,
