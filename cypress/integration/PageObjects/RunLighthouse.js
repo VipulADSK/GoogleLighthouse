@@ -15,7 +15,7 @@ class RunLighthouse
             "first-meaningful-paint": 5000,
             "speed-index": 5000,
             "cumulative-layout-shift": 0.1,
-            "total-blocking-time": 100,
+            "total-blocking-time": 50,
             "interactive": 5000,
             // "max-potential-fid": 1000,
             // "server-response-time": 3000,
