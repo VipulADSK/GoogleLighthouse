@@ -43,7 +43,7 @@ The following things are configured as part of creating this demo.
 ## Adding dependencies and writing test
 
 - Information on adding dependencies for importing `cypress-audit` library is added in [support folder](./cypress/support).
-- Information on Test Case and Parameter for running the test is added in [integration folder](./cypress/e2e/).
+- Information on Test Case and Parameter for running the test is added in [E2E](./cypress/e2e/).
 - [cypress.config.js](./cypress.config.js) consist of BaseUrl and default timeouts which can be changed based on need along with the reporting code.
 - [package-lock.json](./package-lock.json) consist of all the npm dependencies required to run Cypress and Lighthouse.
 
