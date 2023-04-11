@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
-import LoginPage from './PageObjects/LoginPage'
-import RunLighthouse from './PageObjects/RunLighthouse'
+import LoginPage from './PageObjects/LoginPage.cy.js'
+import RunLighthouse from './PageObjects/RunLighthouse.cy.js'
 
 describe('Lighthouse', () => {
     

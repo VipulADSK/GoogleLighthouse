@@ -9,7 +9,9 @@
   "author": "Vipul",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.7.0",
-    "cypress-audit": "^1.1.0"
+    "@cypress-audit/lighthouse": "^1.4.2",
+    "@cypress-audit/pa11y": "^1.4.2",
+    "cypress-audit": "^1.1.0",
+    "cypress": "^12.8.1"
   }
 }
