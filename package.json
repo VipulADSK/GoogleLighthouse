@@ -11,5 +11,9 @@
   "devDependencies": {
     "cypress": "^9.7.0",
     "cypress-audit": "^1.1.0"
+  },
+  "dependencies": {
+    "latest-version": "^7.0.0",
+    "package-json": "^8.1.0"
   }
 }
