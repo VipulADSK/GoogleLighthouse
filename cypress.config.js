@@ -1,15 +1,27 @@
-const { defineConfig } = require('cypress')
+const { lighthouse, prepareAudit } = require("@cypress-audit/lighthouse");
+const { pa11y } = require("@cypress-audit/pa11y");
+const fs = require('fs');
 
-module.exports = defineConfig({
-  chromeWebSecurity: false,
-  defaultCommandTimeout: 10000,
-  execTimeout: 10000,
+module.exports = {
   e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
+    baseUrl: "https://opensource-demo.orangehrmlive.com/", // this is your app
     setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config)
+      on("before:browser:launch", (browser = {}, launchOptions) => {
+        prepareAudit(launchOptions);
+      });
+
+      on("task",
+      {
+          lighthouse: lighthouse((lighthouseReport) =>
+          {
+            console.log("---- Writing lighthouse report to disk ----");
+
+            fs.writeFile("lighthouse.html", lighthouseReport.report, (error) =>
+            {
+              error ? console.log(error) : console.log("Report created successfully");
+            });
+          }),
+        });
     },
-    baseUrl: 'https://opensource-demo.orangehrmlive.com/',
   },
-})
+};

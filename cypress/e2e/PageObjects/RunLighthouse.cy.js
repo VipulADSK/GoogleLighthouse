@@ -33,6 +33,7 @@ class RunLighthouse
         const desktopConfig = {
             //extends: 'lighthouse:default',
             formFactor: 'desktop',
+            saveAssets: true,
             
             throttlingMethod: 'devtools', //Method can be any of the following "devtools", "provided", "simulate"
             
@@ -71,10 +72,10 @@ class RunLighthouse
                 //      uploadThroughputKbps: 700 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
                 //      cpuSlowdownMultiplier: 1,
                 // },
-
+            output: "html",
 
             screenEmulation: { disabled: true },
-        }
+        };
         
         cy.lighthouse(customThresholds, desktopConfig)
         return this
