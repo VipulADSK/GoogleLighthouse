@@ -3,6 +3,7 @@ const { pa11y } = require("@cypress-audit/pa11y");
 const fs = require('fs');
 
 module.exports = {
+  projectId: 'bxhk93',
   e2e: {
     baseUrl: "https://opensource-demo.orangehrmlive.com/", // this is your app
     setupNodeEvents(on, config) {

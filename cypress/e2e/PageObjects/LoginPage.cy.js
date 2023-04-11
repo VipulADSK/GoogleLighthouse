@@ -18,6 +18,7 @@ class LoginPage
 
     VisitDirectory(){
         cy.get(':nth-child(9) > .oxd-main-menu-item').click()
+        cy.get(':nth-child(1) > .oxd-sheet').should('be.visible')
     }
 }
 export default LoginPage
